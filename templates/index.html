@@ -12,9 +12,12 @@
 		
 		<div class="heading">CAMPUSTALKS</div>
 
-		<form id="login-form" onsubmit="return accept();">
+		<br>
+		<h3>Hello {{var_first_name}} {{var_last_name}}</h3>
+
+		<form id="login-form">
 			
-			<input type="username" class="input-field" name="username" id="username" placeholder="email or username"/> </br>
+			<input type="username" class="input-field" name="username" id="username" placeholder="email or username"/></br>
 			<input type="password" class="input-field" name="password" id="password" placeholder="password"/> </br>
 			<div id="error-msg" class="input-field error-box"></div>
 			<input type="submit" class="input-field"/>
@@ -26,7 +29,27 @@
 <script type="text/javascript" src="{%static 'js/jquery.min.js'%}"></script>
 <script type="text/javascript">
 
-	function accept(){
+
+	// $(document).onready(function{
+
+	// 	$('#login-form').onsubmit(function(){
+	// 		var username = $('input[name=username]').val();
+	// 		var password = $('#password').val();
+
+	// 		if(username=="" || password==""){
+	// 			$('#error-msg').show();
+	// 			$('#error-msg').html('Error!!');
+	// 			return false;
+	// 		}
+	// 		return true;
+	// 	});
+
+	// });
+
+	$(document).on('submit','#login-form',function(e){
+		console.log(e);
+		console.log(e.target);
+		e.preventDefault();
 		var username = $('input[name=username]').val();
 		var password = $('#password').val();
 
@@ -35,9 +58,11 @@
 			$('#error-msg').html('Error!!');
 			return false;
 		}
-
 		return true;
-	 }	
+	});
+
+	
+	
 	
 </script>
 </body>

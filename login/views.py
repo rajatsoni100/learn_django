@@ -4,5 +4,6 @@ from django.shortcuts import render
 
 def index(request):
 	template='index.html'
-	print request.method
-	return render(request, template)
+	name = "RAJAt"
+	#new_dict = {'var_first_name':name,'var_last_name':'SONI'}
+	return render(request, template, {'var_first_name':name,'var_last_name':'SONI'})
