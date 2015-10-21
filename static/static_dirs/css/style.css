@@ -1,0 +1,28 @@
+
+body{
+	margin:0px;
+}
+
+.content{
+	text-align: center;
+	padding:20px;
+	margin-top:70px;
+	margin-left: 120px;
+	margin-right: 120px;
+	border: solid 3px #555555;
+}
+
+.heading{
+	padding-bottom: 13px;
+	font-size: 30px;
+}
+
+.input-field{
+	margin:3px 0px;
+	height:25px; 
+}
+
+
+.error-box{
+	display:none;
+}

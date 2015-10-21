@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+<body>
+campustalks
+<form id="login-form">
+	<input type="username" name="username" id="username"  		   		placeholder="email or username"/> </br>
+	<input type="password" name="password" id="password" 		      placeholder="password"/> </br>
+	<input type="submit"/>
+</form>
+
+<button onclick="accept()"> go to js</button> 
+<input type="printentered" id="printentered"/>
+
+
+<script type="text/javascript" src="{%static 'js/jquery.min.js'%}"></script>
+<script type="text/javascript">
+function accept(){
+	var username=document.getElementById('username').value;
+	console.log('username')
+	var printentered=document.getElementById('printentered');
+	printentered.value=username;
+ }	
+	
+</script>
+</body>
+</html>

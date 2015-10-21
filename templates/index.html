@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+
+<head>
+	<link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+	<div class="content">
+		
+		<div class="heading">CAMPUSTALKS</div>
+
+		<form id="login-form" onsubmit="return accept();">
+			
+			<input type="username" class="input-field" name="username" id="username" placeholder="email or username"/> </br>
+			<input type="password" class="input-field" name="password" id="password" placeholder="password"/> </br>
+			<div id="error-msg" class="input-field error-box"></div>
+			<input type="submit" class="input-field"/>
+
+		</form>
+
+	</div>
+
+<script type="text/javascript" src="{%static 'js/jquery.min.js'%}"></script>
+<script type="text/javascript">
+
+	function accept(){
+		var username = $('input[name=username]').val();
+		var password = $('#password').val();
+
+		if(username=="" || password==""){
+			$('#error-msg').show();
+			$('#error-msg').html('Error!!');
+			return false;
+		}
+
+		return true;
+	 }	
+	
+</script>
+</body>
+</html>
