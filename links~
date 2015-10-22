@@ -1,2 +1,8 @@
 Model Field Types
 	https://docs.djangoproject.com/en/1.8/ref/models/fields/#field-types
+	
+Model FieldLookups
+	https://docs.djangoproject.com/en/1.8/topics/db/queries/#field-lookups
+
+Creating Queries	
+	https://docs.djangoproject.com/en/1.8/topics/db/queries/
